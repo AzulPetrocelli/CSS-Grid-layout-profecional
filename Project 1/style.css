@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+  --blue: #81CCF1;
+  --yellow: #EFC66A;
+  --light-pink: #D8A6CB;
+  --pink: #C59ECE;
+  --dark-pink: #ce75c9;
+  --purple: #9996CB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to top, #9996cb, #ab99cc, #bb9dcd, #caa1cc, #d8a6cb);
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(3rem, 1fr));
+  grid-template-rows: repeat(10, 1fr);
+  height: 100vh;
+}
+
+.pink{
+  grid-area: 3/3/4/4;
+  background-color: var(--dark-pink);
+  position: relative;
+}
+
+.pink p {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.4rem;
+  margin: 0;
+  bottom: 2rem;
+  right: -0.4rem;
+}
+
+.yellow {
+  grid-area: 5/1/10/2;
+  background-color: var(--yellow);
+}
+
+.blue {
+  grid-area: 7/1/9/4;
+  background-color: var(--blue);
+}
+
+.pink-no-content-big {
+  grid-area: 3/7/9/10;
+  position: relative;
+  border: 5px solid var(--dark-pink);
+}
+
+.pink-no-content-small {
+  grid-area: 5/6/8/9;
+  border: 5px solid var(--dark-pink);
+}
+
+.pink-big {
+  grid-area: 6/5/11/8;
+  background-color: var(--dark-pink);
+}
+
+.pink-no-content-big p {
+  position: absolute;
+  top: 2rem;
+  left: -3.5rem;
+  font-size: 2.6rem;
+}
